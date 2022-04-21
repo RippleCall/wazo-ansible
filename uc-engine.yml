@@ -12,11 +12,11 @@
   roles:
     - role: debian-upgrade-first
 
-- hosts:
-    - database
-  become: yes
-  roles:
-    - role: wazo-db
+# - hosts:
+#     - database
+#   become: yes
+#   roles:
+#     - role: wazo-db
 
 - hosts: b2bua
   become: yes
