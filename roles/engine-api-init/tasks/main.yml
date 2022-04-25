@@ -16,6 +16,7 @@
     name: wazo-auth-keys
     state: present
 
+# Import for bootstrapping initial keys used
 - name: Bootstrap auth keys
   command: wazo-auth-bootstrap complete
   when: runtime
