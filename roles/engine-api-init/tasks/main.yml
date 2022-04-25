@@ -16,6 +16,10 @@
     name: wazo-auth-keys
     state: present
 
+- name: Bootstrap auth keys
+  command: wazo-auth-bootstrap complete
+  when: runtime
+
 - name: Create service users with wazo-auth-keys
   command: wazo-auth-keys service update
   when: runtime
