@@ -49,8 +49,18 @@ engine_api_db_port=5432
 # api engine config
 ari_password=Nasheow8Eag
 ari_username=xivo
+engine_api_port_confgend=8669
+engine_api_listen_address=127.0.0.1
+engine_language=en_US
+
+#b2bua
 b2bua_host=localhost
 b2bua_port_http=5039
 b2bua_port_sysconfd=8668
-engine_api_port_confgend=8669
-engine_api_listen_address=127.0.0.1
+b2bua_host=localhost
+b2bua_listen_address=127.0.0.1
+b2bua_port_ami=5038
+b2bua_port_http=5039
+b2bua_port_https=5040
+b2bua_ami_permit_client_address=127.0.0.1
+b2bua_ami_permit_client_mask=255.255.255.255
