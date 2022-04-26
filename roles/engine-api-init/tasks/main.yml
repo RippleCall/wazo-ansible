@@ -17,13 +17,13 @@
     state: present
 
 # Import for bootstrapping initial keys used
-- name: Bootstrap auth keys
-  command: wazo-auth-bootstrap complete
-  when: runtime
-
-# - name: Create service users with wazo-auth-keys
-#   command: wazo-auth-keys service update
+# - name: Bootstrap auth keys
+#   command: wazo-auth-bootstrap complete
 #   when: runtime
+
+- name: Create service users with wazo-auth-keys
+  command: wazo-auth-keys service update
+  when: runtime
 
 - name: Create default main database preconfiguration
   tempfile:
