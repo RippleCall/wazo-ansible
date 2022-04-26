@@ -15,14 +15,18 @@
   apt:
     name: wazo-auth-keys
     state: present
+    
+- name: Create service users with wazo-auth-keys
+  command: wazo-auth-keys service clean
+  when: runtime
 
 # Import for bootstrapping initial keys used
-# - name: Bootstrap auth keys
-#   command: wazo-auth-bootstrap complete
-#   when: runtime
+- name: Bootstrap auth keys
+  command: wazo-auth-bootstrap complete
+  when: runtime
 
 - name: Create service users with wazo-auth-keys
-  command: wazo-auth-keys service update
+  command: wazo-auth-keys service update --recreate
   when: runtime
 
 - name: Create default main database preconfiguration
