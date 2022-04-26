@@ -31,9 +31,9 @@ uc_engine_host
 wazo_distribution = pelican-buster
 wazo_distribution_upgrade = pelican-buster
 engine_api_configure_wizard = true
+engine_api_root_password = united
 
 # db
-engine_api_root_password = united
 engine_api_db_admin_password=ripplecall
 engine_api_db_auth_user=postgres
 engine_api_db_auth_password=ripplecall
@@ -45,3 +45,12 @@ engine_api_db_confd_user=postgres
 engine_api_db_confd_password=ripplecall
 tenant_name=ripplecall_default_company
 engine_api_db_port=5432
+
+# api engine config
+ari_password=Nasheow8Eag
+ari_username=xivo
+b2bua_host=localhost
+b2bua_port_http=5039
+b2bua_port_sysconfd=8668
+engine_api_port_confgend=8669
+engine_api_listen_address=127.0.0.1
