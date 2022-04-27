@@ -24,16 +24,15 @@ database
 engine_api
 
 # Uncomment the 2 following lines if you want to deploy wazo-ui too:
-# [uc_ui:children]
-# uc_engine_host
+[uc_ui:children]
+uc_engine_host
 
 [uc_engine:vars]
-# Variables are defined in ../roles/wazo-vars/defaults/main.yml
-
-# Uncomment the 2 following lines to install the stable version (default is
-# development version)
-wazo_distribution = pelican-buster
+ wazo_distribution = pelican-buster
 wazo_distribution_upgrade = pelican-buster
+
+
+[uc_engine:vars]
 engine_api_configure_wizard = true
 engine_api_root_password = united
 
@@ -56,10 +55,9 @@ b2bua_port_http=5039
 b2bua_port_https=5040
 b2bua_port_sysconfd=8668
 b2bua_listen_address=127.0.0.1
-
-
-[uc_ui:children]
-uc_engine_host
+engine_api_port_confgend=8669
+engine_api_listen_address=127.0.0.1
+b2bua_port_https=5040
 
 # PostgreSQL settings
 # postgresql_port = 5432
